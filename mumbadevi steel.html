@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QRThali - Digital Menu Solution</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .plan-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 25px 30px;
+    width: 280px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.plan-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.plan-box h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.plan-box p {
+    font-size: 0.95em;
+}
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(120deg, #ff6b6b, #ffcc5c);
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('background-pattern.png');
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    header {
+      padding: 60px 20px;
+      font-size: 2em;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .price-box {
+      display: inline-block;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 25px;
+      margin: 15px;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .price-box:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+
+    #contact {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 50px;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    form input,
+    form select {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 5px;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    form p {
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QRThali</h1>
+    <p>Digitize your restaurant menu effortlessly!</p>
+  </header>
+
+  <section id="about">
+    <h2>About QRThali</h2>
+    <p>QRThali offers seamless QR-based digital menus, enhancing customer experience and eliminating paper waste.</p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Instant QR code access</li>
+      <li>Customizable designs</li>
+      <li>Multi-section menus</li>
+      <li>Affordable pricing plans</li>
+    </ul>
+  </section>
+
+ <section id="pricing" style="background: linear-gradient(to right, #f2709c, #ff9472); padding: 60px 20px; color: white;">
+  <h2 style="font-size: 2.2em; margin-bottom: 40px;">Pricing Plans</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="plan-box">
+      <h3>Basic Plan – ₹399</h3>
+      <p>Simple black & white menu</p>
+    </div>
+    <div class="plan-box">
+      <h3>Pro Plan – ₹499</h3>
+      <p>Attractive color menu (non-editable)</p>
+    </div>
+    <div class="plan-box">
+      <h3>Premium Plan – ₹799</h3>
+      <p>Multi-section menu with unlimited edits</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact">
+    <h2>Order Now</h2>
+    <form id="orderForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="restaurant">Restaurant Name:</label>
+      <input type="text" id="restaurant" name="restaurant" required />
+
+      <label for="plan">Select Plan:</label>
+      <select id="plan" name="plan" required>
+        <option value="Basic - ₹399">Basic - ₹399</option>
+        <option value="Pro - ₹499">Pro - ₹499</option>
+        <option value="Premium - ₹799">Premium - ₹799</option>
+      </select>
+
+      <p>📎 After clicking "Submit", you’ll be redirected to WhatsApp. Please upload your menu image or file manually in the chat.</p>
+
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 QRThali - All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const restaurant = document.getElementById("restaurant").value;
+      const plan = document.getElementById("plan").value;
+
+      const message = `Hello,%0AMy name is *${name}* from *${restaurant}*.%0AI would like to order the *${plan}* plan.%0AThanks!`;
+
+      const whatsappNumber = "919157651588"; // ✅ Correct WhatsApp number
+      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappLink, "_blank");
+    });
+  </script>
+</body>
+</html>
